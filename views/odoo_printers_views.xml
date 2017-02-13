@@ -1,1 +1,90 @@
-<?xml
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+
+     <!-- views -->
+     <record model="ir.ui.view" id="printer_form">
+            <field name="name">odoo_printers.printer_details.form</field>
+            <field name="model">odoo_printers.printer_details</field>
+            <field name="arch" type="xml">
+                <form string="Preparation">
+                    <sheet>
+                        <group>
+                        <field name="model"/>
+                        <field name="serial"/>
+                        <field name="client"/>
+                        </group>
+                        <notebook>
+                            <page string="Contatori mensili">
+                                <field name="Mensilità" options="{&quot;no_open&quot;: True,&quot;no_create&quot;: True}" 
+                                       context="{'tree_view_ref':'odoo_printers.monthly_meters_tree'}"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+     
+      <record model="ir.ui.view" id="printer_tree">
+            <field name="name">odoo_printers.printer_details.tree</field>
+            <field name="model">odoo_printers.printer_details</field>
+            <field name="arch" type="xml">
+                <tree>
+                        <field name="model"/>
+                        <field name="serial"/>
+                        <field name="client"/>
+                </tree>
+            </field>
+        </record>
+
+
+    <record model="ir.ui.view" id="monthly_meters_tree">
+            <field name="name">odoo_printers.monthly_meters.tree</field>
+            <field name="model">odoo_printers.monthly_meters</field>
+            <field name="arch" type="xml">
+                <tree>
+                        <field name="month"/>
+                        <field name="bw"/>
+                        <field name="col"/>
+                </tree>
+            </field>
+        </record>
+
+       <!-- window action -->
+       <!--
+            The following tag is an action definition for a "window action",
+            that is an action opening a view or a set of views
+       -->
+
+
+        <record model="ir.actions.act_window" id="printer_action">
+            <field name="name">Stampanti</field>
+            <field name="res_model">odoo_printers.printer_details</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Primo setup della stampante
+                </p>
+            </field>
+        </record>
+
+
+        <!-- second level menu: parent - sales -->
+        <!-- Non so se qualcuno se ne fosse accorto ma qua sotto manca la sequence! -->
+
+
+        <menuitem
+            id="menu_stampanti"
+            name="Stampanti"
+            parent="base.menu_sales"
+            action="printer_action"
+        />
+
+       
+        
+
+
+    </data>
+</openerp>
