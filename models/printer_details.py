@@ -18,18 +18,18 @@ class printer_detail(models.Model):
     _name = 'odoo_printers.printer_detail'
 
     
-    model = fields.Selection(SELECTIONS,string="modello stampante",required=True)
-    serial = fields.Char(string="seriale stampante",required=True)
+    model = fields.Selection(SELECTIONS,string="Modello",required=True)
+    serial = fields.Char(string="Seriale",required=True)
     
     #TODO linka il cliente vero di odoo o no?
-    client = fields.Char(string="cliente",required=True)
+    client = fields.Char(string="Cliente",required=True)
     
-    tot_bw = fields.Integer(string="numero totale stampe in bianco e nero", default=0)
-    tot_col = fields.Integer(string="numero totale stampe a colori", default=0)
-    toner_black = fields.Integer(string="livello toner nero", default=100)
-    toner_red = fields.Integer(string="livello toner rosso", default=100)
-    toner_blue = fields.Integer(string="livello toner blu", default=100)
-    toner_yellow = fields.Integer(string="livello toner giallo", default=100)
+    tot_bw = fields.Integer(string="Totale stampe in bianco e nero", default=0)
+    tot_col = fields.Integer(string="Totale stampe a colori", default=0)
+    toner_black = fields.Integer(string="Livello toner nero", default=100)
+    toner_red = fields.Integer(string="Livello toner rosso", default=100)
+    toner_blue = fields.Integer(string="Livello toner blu", default=100)
+    toner_yellow = fields.Integer(string="Livello toner giallo", default=100)
     months = fields.Many2many('odoo_printers.monthly_meters')
     
 
