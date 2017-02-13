@@ -14,8 +14,8 @@ SELECTIONS = [
     ('m5', 'Modello5'),
 ]
 
-class printer_detail(models.Model):
-    _name = 'odoo_printers.printer_detail'
+class printer_details(models.Model):
+    _name = 'odoo_printers.printer_details'
 
     
     model = fields.Selection(SELECTIONS,string="Modello",required=True)
@@ -45,7 +45,7 @@ class printer_detail(models.Model):
         toner_blue = vals['toner_blue']
         toner_yellow = vals['toner_yellow']
         
-        res = super(printer_detail, self).create(vals)
+        res = super(printer_details, self).create(vals)
         return res
     
 
@@ -57,5 +57,5 @@ class monthly_meters(models.Model):
     month = fields.Char(string="stringa mese-anno")
     bw = fields.Integer(string="numero totale stampe in bianco e nero mensili", default=0)
     col = fields.Integer(string="numero totale stampe a colori mensili", default=0)
-    #printer = fields.Many2one('odoo_printers.printer_detail')
+    #printer = fields.Many2one('odoo_printers.printer_details')
     
