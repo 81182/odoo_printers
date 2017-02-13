@@ -1,1 +1,93 @@
-<?xml version
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data noupdate="0">
+
+    <record id="nobody" model="res.groups">
+        <field name="name">Nobody</field>
+        <field name="comment">Sections Nobody Has to See.</field>
+    </record>
+
+
+
+
+<!--
+    <record model="ir.ui.menu" id="base.menu_reporting_dashboard">
+        <field eval="[(4, ref('nobody'))]" name="groups_id"/>
+    </record>
+
+    <record model="ir.ui.menu" id="hr_recruitment.menu_hr_recruitment_report_all">
+        <field eval="[(4, ref('nobody'))]" name="groups_id"/>
+    </record>
+
+    -->
+
+<!-- Removing from group_no_one(technical feature group) -->
+
+    <!--
+    <record model="ir.ui.menu" id="hr.menu_view_employee_category_form">
+        <field eval="[(3, ref('base.group_no_one'))]" name="groups_id"/>
+    </record>
+
+    <record model="ir.ui.menu" id="hr.menu_view_employee_category_form">
+        <field eval="[(4, ref('nobody'))]" name="groups_id"/>
+    </record>
+
+    <record model="ir.ui.menu" id="survey.menu_survey_form">
+        <field eval="[(4, ref('nobody'))]" name="groups_id"/>
+    </record>
+
+    <record model="ir.ui.menu" id="survey.menu_survey_type_form1">
+        <field eval="[(4, ref('nobody'))]" name="groups_id"/>
+    </record>
+
+    <record model="ir.ui.menu" id="survey.menu_survey_page_form1">
+        <field eval="[(4, ref('nobody'))]" name="groups_id"/>
+    </record>
+
+    <record model="ir.ui.menu" id="survey.menu_survey_question_form1">
+        <field eval="[(4, ref('nobody'))]" name="groups_id"/>
+    </record>
+
+    <record model="ir.ui.menu" id="hr_recruitment.menu_crm_case_categ0_act_job">
+        <field eval="[(4, ref('nobody'))]" name="groups_id"/>
+    </record>
+
+    <record model="ir.ui.menu" id="survey.menu_survey_label_form1">
+        <field eval="[(4, ref('nobody'))]" name="groups_id"/>
+    </record>
+
+    <record model="ir.ui.menu" id="survey.menu_survey_form">
+        <field eval="[(4, ref('nobody'))]" name="groups_id"/>
+    </record>
+ 
+    <record model="ir.ui.menu" id="survey.menu_survey_response_line_form">
+        <field eval="[(4, ref('nobody'))]" name="groups_id"/>
+    </record>
+
+    <record model="ir.ui.menu" id="hr_recruitment.menu_hr_recruitment_recruitment">
+        <field eval="[(4, ref('nobody'))]" name="groups_id"/>
+    </record>
+
+    <record model="ir.ui.menu" id="base.marketing_menu">
+        <field eval="[(4, ref('nobody'))]" name="groups_id"/>
+    </record>
+
+-->
+
+<!-- Removing from group_user -->
+
+    <!--
+    <record model="ir.ui.menu" id="base.menu_reporting">
+        <field eval="[(3, ref('base.group_user'))]" name="groups_id"/>
+    </record>
+
+    <record model="ir.ui.menu" id="base.menu_reporting">
+        <field eval="[(4, ref('nobody'))]" name="groups_id"/>
+    </record>
+-->
+
+
+</data>
+</openerp>
+
+
