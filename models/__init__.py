@@ -1,1 +1,1 @@
-import printer_datails
+import printer_details
