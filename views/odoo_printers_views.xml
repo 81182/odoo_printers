@@ -17,7 +17,7 @@
                         </group>
                         <notebook>
                             <page string="Contatori mensili">
-                                <field name="Mensilità" options="{&quot;no_open&quot;: True,&quot;no_create&quot;: True}" 
+                                <field name="months" options="{&quot;no_open&quot;: True,&quot;no_create&quot;: True}" 
                                        context="{'tree_view_ref':'odoo_printers.monthly_meters_tree'}"/>
                             </page>
                         </notebook>
