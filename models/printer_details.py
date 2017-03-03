@@ -30,7 +30,7 @@ class printer_details(models.Model):
     toner_red = fields.Integer(string="Livello toner rosso", default=100)
     toner_blue = fields.Integer(string="Livello toner blu", default=100)
     toner_yellow = fields.Integer(string="Livello toner giallo", default=100)
-    months = fields.One2many('odoo_printers.monthly_meters', string="mesi correlati")
+    months = fields.One2many('odoo_printers.monthly_meters', 'printer', string="mesi correlati")
     
 
     @api.model
@@ -57,5 +57,5 @@ class monthly_meters(models.Model):
     month = fields.Char(string="stringa mese-anno")
     bw = fields.Integer(string="numero totale stampe in bianco e nero mensili", default=0)
     col = fields.Integer(string="numero totale stampe a colori mensili", default=0)
-    printer = fields.Many2one('odoo_printers.printer_details', string="stampante correlata")
+    printer = fields.Many2one('odoo_printers.printer_details', 'months', string="stampante correlata")
     
