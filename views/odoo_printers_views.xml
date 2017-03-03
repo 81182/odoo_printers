@@ -20,6 +20,12 @@
                                 <field name="months" options="{&quot;no_open&quot;: True,&quot;no_create&quot;: True}" 
                                        context="{'tree_view_ref':'odoo_printers.monthly_meters_tree'}"/>
                             </page>
+                            <page string="Stato toner">
+                                <field name="toner_black"/>
+                                <field name="toner_red"/>
+                                <field name="toner_blue"/>
+                                <field name="toner_yellow"/>
+                            </page>
                         </notebook>
                     </sheet>
                 </form>
