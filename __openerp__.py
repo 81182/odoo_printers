@@ -24,7 +24,7 @@
     # always loaded
     'data': [
 	#'data/data.xml',
-        #'views/viper_base_views.xml',
+        'views/odoo_printers_views.xml',
         #'views/inherit_view.xml',
         #'views/web_template.xml',
         #'security/viper_base_security.xml',
