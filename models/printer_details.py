@@ -38,12 +38,12 @@ class printer_details(models.Model):
         model = vals['model']
         serial = vals['serial']
         client = vals['client']
-        tot_bw = vals['tot_bw']
-        tot_col = vals['tot_col']
-        toner_black = vals['toner_black']
-        toner_red = vals['toner_red']
-        toner_blue = vals['toner_blue']
-        toner_yellow = vals['toner_yellow']
+        #tot_bw = vals['tot_bw']
+        #tot_col = vals['tot_col']
+        #toner_black = vals['toner_black']
+        #toner_red = vals['toner_red']
+        #toner_blue = vals['toner_blue']
+        #toner_yellow = vals['toner_yellow']
         
         res = super(printer_details, self).create(vals)
         return res
